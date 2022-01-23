@@ -1,28 +1,39 @@
 package com.example.GPSRest.Rest;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.validation.Valid;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.example.GPSRest.Repo.LocationRepo;
+import com.example.GPSRest.Service.LocationService;
 import com.example.GPSRest.model.Location;
 
-
-@RestController
+@Controller
 public class LocationController {
-	
-	private static final Logger logger = LogManager.getLogger(LocationController.class);
-	
-	@Autowired
-	private LocationRepo locationRepo;
+
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+	private LocationService locationService;
+
+	public LocationController(LocationService locationService) {
+		this.locationService = locationService;
+	}
 
 	@PostMapping("/post")
-	public Location createLocation(@RequestBody Location locationBody) {
+	@ResponseStatus(HttpStatus.ACCEPTED)
+	public void createLocation(@RequestBody @Valid Location locationBody) {
 		
-		return locationRepo.save(locationBody);
+		logger.info("Start " + Thread.currentThread().getName());
+		locationService.saveLocationToDatabase(locationBody);
+		logger.info("End " + Thread.currentThread().getName());
+		
+	
 	}
 	
 }

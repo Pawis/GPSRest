@@ -1,0 +1,27 @@
+7380351 [restartedMain] INFO  c.e.GPSRest.GpsRestApplication - Starting GpsRestApplication using Java 16 on DESKTOP-8TNVRIA with PID 16536 (D:\SpringBoot\GPSRest\target\classes started by pawis in D:\SpringBoot\GPSRest)
+7380353 [restartedMain] DEBUG c.e.GPSRest.GpsRestApplication - Running with Spring Boot v2.6.2, Spring v5.3.14
+7380353 [restartedMain] INFO  c.e.GPSRest.GpsRestApplication - No active profile set, falling back to default profiles: default
+7380458 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+7380463 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 1 JPA repository interfaces.
+7380515 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8007 (http)
+7380516 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+7380517 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+7380533 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+7380533 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 179 ms
+7380538 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-58 - Starting...
+7380539 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-58 - Start completed.
+7380540 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+7380550 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+7380553 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+7380568 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+7380568 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+7380605 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+7380652 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+7380656 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8007 (http) with context path ''
+7380658 [restartedMain] INFO  c.e.GPSRest.GpsRestApplication - Started GpsRestApplication in 0.344 seconds (JVM running for 7380.887)
+7380659 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+7424805 [Thread-233] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+7424805 [Thread-233] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+7425009 [Thread-233] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+7425010 [Thread-233] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-58 - Shutdown initiated...
+7425011 [Thread-233] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-58 - Shutdown completed.
