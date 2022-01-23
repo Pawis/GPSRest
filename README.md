@@ -8,4 +8,8 @@ Postanowilem zaimplementowac to w sposob asynchroniczny przez uzycie adnotacji
 ktory ja wywowal i pozwala mu wrocic a sama metoda pracuje na innym watku przez co ilosc
 aktywnych watkow jest zmniejszona.
 
+Dodalem rowniez obsluge wyjatkow od Hibernate Validator ktora zwraca json z opisem bledu.
 
+
+Chyba mozliwe jest stworzenie wlasnej metody save w CrudRepository ktora zwraca Future<Location> przez to bedziemy mogli 
+zwrocic zapisany objekt ale nie jestem pewien jak to bedzie dzialac.

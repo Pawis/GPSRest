@@ -18,6 +18,7 @@ public class LocationServiceImpl implements LocationService{
 	public LocationServiceImpl(LocationRepo locatiobRepo) {
 		this.locatiobRepo=locatiobRepo;
 	}
+	
 	public Location saveLocationToDatabase(Location location) {
 		
 		logger.info("StartService " + Thread.currentThread().getName());
