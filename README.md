@@ -1,5 +1,5 @@
 
-## Opis Programu
+## Opis Rozwiazania
 
 Program ma odbierac i zapisywac dane lokalizacji urzadzenia GPS.
 
@@ -10,6 +10,7 @@ aktywnych watkow jest zmniejszona.
 
 Dodalem rowniez obsluge wyjatkow od Hibernate Validator ktora zwraca json z opisem bledu.
 
+Do testowania uzylem takich aplikacji jak VisualVM i JMeter
 
 Chyba mozliwe jest stworzenie wlasnej metody save w CrudRepository ktora zwraca Future<Location> przez to bedziemy mogli 
 zwrocic zapisany objekt ale nie jestem pewien jak to bedzie dzialac.
